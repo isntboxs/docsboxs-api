@@ -1,0 +1,98 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Build outputs
+dist
+build
+out
+.next
+.nuxt
+.cache
+.parcel-cache
+.turbo
+
+# TypeScript
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Testing
+coverage
+.nyc_output
+*.lcov
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode
+.idea
+*.sublime-project
+*.sublime-workspace
+.history
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lock
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Documentation that shouldn't be formatted
+CHANGELOG.md
+LICENSE
+LICENSE.md
+
+# Generated files
+*.min.js
+*.min.css
+*.bundle.js
+*.bundle.css
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+tmp
+temp
+*.tmp
+*.temp
+
+# Public/Static assets (if you have large binary files)
+# Uncomment if needed:
+# public/images
+# public/fonts
+# static
