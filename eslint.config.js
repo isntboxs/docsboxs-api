@@ -5,7 +5,7 @@ import globals from 'globals';
 
 export default defineConfig(
   {
-    ignores: ['node_modules', 'dist', 'src/generated'],
+    ignores: ['node_modules', 'dist', 'src/generated', 'api'],
   },
   {
     files: ['**/*.ts'],

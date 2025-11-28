@@ -29,5 +29,8 @@
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx"
   },
-  "exclude": ["node_modules", "dist"]
+  "tsc-alias": {
+    "resolveFullPaths": true
+  },
+  "exclude": ["node_modules", "dist", "api"]
 }
