@@ -2,7 +2,7 @@
   "name": "docsboxs-api",
   "type": "module",
   "scripts": {
-    "build": " tsc && tsc-alias",
+    "build": " prisma generate && tsc && tsc-alias",
     "check-types": "tsc -b",
     "local:dev": "tsx watch src/index.ts",
     "start": "node dist/index.js",
