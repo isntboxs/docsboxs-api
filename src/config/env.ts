@@ -14,6 +14,12 @@ export const env = createEnv({
         .map((origin) => origin.trim())
         .filter(Boolean)
     ),
+    ADMIN_EMAILS: z
+      .string()
+      .default('')
+      .transform((val) => (val === '' ? [] : val.split(','))),
+    BETTER_AUTH_SECRET: z.string(),
+    BETTER_AUTH_URL: z.url(),
   },
   runtimeEnv: process.env,
 });
