@@ -29,3 +29,5 @@ lerna-debug.log*
 dist
 .vercel
 .env*.local
+
+src/generated
