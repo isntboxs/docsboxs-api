@@ -1,5 +1,4 @@
 import createApp from '@/lib/create-app';
-
 import authRoute from '@/routes/auth.route';
 import indexRoute from '@/routes/index.route';
 
