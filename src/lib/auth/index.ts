@@ -1,16 +1,17 @@
+import { betterAuth } from 'better-auth';
 import { prismaAdapter } from 'better-auth/adapters/prisma';
 import {
-  username as usernamePlugin,
-  anonymous as anonymousPlugin,
   admin as adminPlugin,
+  anonymous as anonymousPlugin,
   bearer as bearerPlugin,
+  jwt as jwtPlugin,
   multiSession as multiSessionPlugin,
   openAPI as openAPIPlugin,
-  jwt as jwtPlugin,
+  username as usernamePlugin,
 } from 'better-auth/plugins';
-import { betterAuth } from 'better-auth';
 
 import { env } from '@/config/env';
+import { UserRole } from '@/generated/prisma/enums';
 import { prisma } from '@/lib/prisma';
 
 export const auth = betterAuth({
@@ -34,13 +35,16 @@ export const auth = betterAuth({
             return {
               data: {
                 ...user,
-                role: 'admin',
+                role: UserRole.admin,
               },
             };
           }
 
           return {
-            data: user,
+            data: {
+              ...user,
+              role: UserRole.user,
+            },
           };
         },
       },
@@ -72,8 +76,8 @@ export const auth = betterAuth({
   user: {
     additionalFields: {
       role: {
-        type: ['user', 'admin'],
-        defaultValue: 'user',
+        type: 'string',
+        defaultValue: UserRole.user,
       },
     },
   },
